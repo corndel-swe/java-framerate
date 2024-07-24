@@ -6,16 +6,16 @@ public class App {
   private Javalin app;
 
   public static void main(String[] args) {
-    var app = new App();
-    var actualJavalinApp = app.javalinApp();
-    actualJavalinApp.start(8080);
+    var javalin = new App().javalinApp();
+    javalin.start(8080);
   }
 
-	public App() {
+  public App() {
     app = Javalin.create()
-      .get("/", HomeController::get);
-	}
-  
+        .get("/", HomeController::get);
+    app.get("/hello", ctx -> ctx.result("Welcome to the Bleeter server!"));
+  }
+
   public Javalin javalinApp() {
     return app;
   }
