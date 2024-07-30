@@ -13,23 +13,13 @@ with other users.
 
 1. Clone your fork of the repo
 
-2. Run
+1. Run the command
 
    ```bash
-   npm install
+   ./mvnw clean && ./mvnw compile && ./mvnw exec:java -Dexec.mainClass=com.corndel.nozama.App
    ```
 
-   to install dependencies
-
-3. Run
-
-   ```bash
-   npm run dev
-   ```
-
-   to start the live server
-
-4. Now visit `http://localhost:5000` to view the website
+   and visit [http://localhost:8080/](http://localhost:8080/) in your browser.
 
 ## Day 1
 
@@ -40,21 +30,21 @@ with other users.
 > You can test the exercises by running, for example,
 >
 > ```bash
-> npm run test:d1e1
+> ./mvnw test -Dtest=D1E1Tests
 > ```
 
 1. Read about
-   [static files](https://tech-docs.corndel.com/express/static-files.html)
+   [static files](https://tech-docs.corndel.com/javalin/static-files.html)
 
 2. Solve and push `d1e1.js`
 
 3. Read about
-   [views and templates](https://tech-docs.corndel.com/express/views-and-templates.html)
+   [views and templates](https://tech-docs.corndel.com/javalin/views-and-templates.html)
 
 4. Solve and push `d1e2.js` and `d1e2.ejs`
 
 5. Read about
-   [using loops](https://tech-docs.corndel.com/express/using-loops.html)
+   [using loops](https://tech-docs.corndel.com/javalin/using-loops.html)
 
 6. Solve and push `d1e3.js` and `d1e3.ejs`
 
@@ -67,17 +57,17 @@ Head to `CONTRIBUTING.md` to see what to do next
 ### Deep dive
 
 1. Read about
-   [template partials](https://tech-docs.corndel.com/express/template-partials.html)
+   [template partials](https://tech-docs.corndel.com/javalin/template-partials.html)
 
 2. Solve and push `d2e1.js` and `d2e1.ejs`
 
 3. Read about
-   [CSS and assets](https://tech-docs.corndel.com/express/css-and-assets.html)
+   [CSS and assets](https://tech-docs.corndel.com/javalin/css-and-assets.html)
 
 4. Solve and push `d2e2.js` and `d2e2.ejs`
 
 5. Read about
-   [user input](https://tech-docs.corndel.com/express/user-input.html)
+   [user input](https://tech-docs.corndel.com/javalin/user-input.html)
 
 6. Solve and push `d2e3.js` and `d2e3.ejs`
 

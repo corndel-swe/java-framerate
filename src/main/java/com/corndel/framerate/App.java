@@ -1,6 +1,7 @@
 package com.corndel.framerate;
 
 import io.javalin.Javalin;
+import io.javalin.http.staticfiles.Location;
 
 public class App {
   private Javalin app;
@@ -11,8 +12,8 @@ public class App {
   }
 
   public App() {
-    app = Javalin.create()
-        .get("/", HomeController::get);
+    app = Javalin.create(
+        config -> config.staticFiles.add("/public", Location.CLASSPATH));
     app.get("/hello", ctx -> ctx.result("Welcome to the Bleeter server!"));
   }
 
