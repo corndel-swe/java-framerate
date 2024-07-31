@@ -6,11 +6,12 @@ import gg.jte.resolve.ResourceCodeResolver;
 import io.javalin.Javalin;
 import io.javalin.rendering.template.JavalinJte;
 import java.util.Collections;
+import java.util.List;
 
-public class D1E2 {
+public class D1E3 {
   public Javalin app;
 
-  public D1E2() {
+  public D1E3() {
     app =
         Javalin.create(
             config -> {
@@ -18,13 +19,21 @@ public class D1E2 {
               var templateEngine = TemplateEngine.create(codeResolver, ContentType.Html);
               config.fileRenderer(new JavalinJte(templateEngine));
             });
+
     app.get(
-        "/d1e2",
+        "/d1e3",
         ctx -> {
-          var message = "Hello from d1e2!";
+          var shopping =
+              List.of(
+                  "Eggs",
+                  "Flour",
+                  "Sugar",
+                  "Lifesize cutout of Christian Bale as Batman",
+                  "Milk",
+                  "Bread");
 
           // TODO Write prompt and remove answer
-          ctx.render("exercises/d1e2.jte", Collections.singletonMap("message", message));
+          ctx.render("exercises/d1e3.jte", Collections.singletonMap("shopping", shopping));
         });
   }
 }

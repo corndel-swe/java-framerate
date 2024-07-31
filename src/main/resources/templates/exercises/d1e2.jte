@@ -1,4 +1,4 @@
-@import com.corndel.framerate.exercises.D1E2.
+@param String message
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +11,7 @@
 
 <body>
   <!-- TODO: in the h1 below, use jte to inject the value of `message` -->
-  <h1>${page.getTitle}</h1>
+  <h1>${message}</h1>
 </body>
 
 </html>
