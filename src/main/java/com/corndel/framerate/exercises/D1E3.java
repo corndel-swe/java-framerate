@@ -15,7 +15,7 @@ public class D1E3 {
     app =
         Javalin.create(
             config -> {
-              var codeResolver = new ResourceCodeResolver("templates");
+              var codeResolver = new ResourceCodeResolver("exercises/templates");
               var templateEngine = TemplateEngine.create(codeResolver, ContentType.Html);
               config.fileRenderer(new JavalinJte(templateEngine));
             });
@@ -33,7 +33,7 @@ public class D1E3 {
                   "Bread");
 
           // TODO Write prompt and remove answer
-          ctx.render("exercises/d1e3.jte", Collections.singletonMap("shopping", shopping));
+          ctx.render("d1e3.jte", Collections.singletonMap("shopping", shopping));
         });
   }
 }

@@ -14,7 +14,7 @@ public class D1E2 {
     app =
         Javalin.create(
             config -> {
-              var codeResolver = new ResourceCodeResolver("templates");
+              var codeResolver = new ResourceCodeResolver("exercises/templates");
               var templateEngine = TemplateEngine.create(codeResolver, ContentType.Html);
               config.fileRenderer(new JavalinJte(templateEngine));
             });
@@ -24,7 +24,7 @@ public class D1E2 {
           var message = "Hello from d1e2!";
 
           // TODO Write prompt and remove answer
-          ctx.render("exercises/d1e2.jte", Collections.singletonMap("message", message));
+          ctx.render("d1e2.jte", Collections.singletonMap("message", message));
         });
   }
 }
