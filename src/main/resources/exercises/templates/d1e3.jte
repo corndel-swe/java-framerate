@@ -15,9 +15,6 @@
 
   <ul>
     <!-- TODO: loop through `shopping` and render each item inside a <li> element -->
-    @for(var item : shopping)
-      <li>${item}</li>
-    @endfor
   </ul>
 </body>
 

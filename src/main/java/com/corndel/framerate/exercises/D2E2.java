@@ -26,9 +26,6 @@ public class D2E2 {
           // TODO: Render 'd2e2.jte'
 
           // TODO: Open d2e2.jte and follow the instructions
-
-          // TODO Remove answer
-          ctx.render("d2e2.jte");
         });
   }
 }

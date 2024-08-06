@@ -4,8 +4,6 @@ import gg.jte.ContentType;
 import gg.jte.TemplateEngine;
 import gg.jte.resolve.ResourceCodeResolver;
 import io.javalin.Javalin;
-import io.javalin.rendering.template.JavalinJte;
-import java.util.Collections;
 import java.util.List;
 
 public class D1E3 {
@@ -19,7 +17,6 @@ public class D1E3 {
               var templateEngine = TemplateEngine.create(codeResolver, ContentType.Html);
 
               // TODO: Configure the app to use EJS as the view engine
-              config.fileRenderer(new JavalinJte(templateEngine));
             });
 
     app.get(
@@ -36,9 +33,6 @@ public class D1E3 {
           // TODO: Render 'd1e3.jte', passing the value of `shopping`
 
           // TODO: Open d1e3.ejs and follow the instructions
-
-          // TODO Write prompt and remove answer
-          ctx.render("d1e3.jte", Collections.singletonMap("shopping", shopping));
         });
   }
 }

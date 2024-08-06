@@ -11,7 +11,7 @@
 
 <body>
   <!-- TODO: in the h1 below, use jte to inject the value of `message` -->
-  <h1>${message}</h1>
+  <h1>REPLACE_ME</h1>
 </body>
 
 </html>

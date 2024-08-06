@@ -29,12 +29,10 @@ public class D2E3 {
     app.post(
         "/submit",
         ctx -> {
-          // TODO: get the `name` and `email` from the form
-          // so that the below response works
+          // TODO: get the `name` and `email` from the form so that the below response works
 
-          // TODO: Remove answer
-          var name = ctx.formParam("name");
-          var email = ctx.formParam("email");
+          var name = "";
+          var email = "";
 
           ctx.result("Received: " + name + ", " + email);
         });

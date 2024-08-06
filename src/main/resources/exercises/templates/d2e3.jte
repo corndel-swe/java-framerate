@@ -14,15 +14,6 @@
     - create a form which posts to the '/submit' endpoint
     - it should send a "name" and an "email"
   -->
-
-  <!--
-    TODO: Remove
-  -->
-  <form action="/submit" method="post">
-    <input type="text" name="name">
-    <input type="email" name="email">
-    <button type="submit">Submit</button>
-  </form>
 </body>
 
 </html>

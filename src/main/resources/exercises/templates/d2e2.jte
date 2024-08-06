@@ -13,10 +13,6 @@
     - Insert `success.jpg` from the public folder here
     - Ensure the alt text says "Success Kid"
   -->
-  <!--
-    TODO: REMOVE ANSWER
-  -->
-  <img src="/success.jpg" alt="Success Kid" width="150" />
 </body>
 
 </html>

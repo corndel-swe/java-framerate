@@ -5,7 +5,6 @@ import gg.jte.TemplateEngine;
 import gg.jte.resolve.ResourceCodeResolver;
 import io.javalin.Javalin;
 import io.javalin.rendering.template.JavalinJte;
-import java.util.Collections;
 
 public class D1E2 {
   public Javalin app;
@@ -25,9 +24,6 @@ public class D1E2 {
 
           // TODO: Render 'd1e2.jte' and pass the msg
           // TODO: Open d1e2.jte and follow the instructions
-
-          // TODO remove answer
-          ctx.render("d1e2.jte", Collections.singletonMap("message", message));
         });
   }
 }

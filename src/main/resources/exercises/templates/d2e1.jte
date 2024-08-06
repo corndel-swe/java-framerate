@@ -11,7 +11,6 @@
   <h1>Welcome to day 2!</h1>
   <div>
     <!-- TODO: Call the template marketing.jte here -->
-    @template.partial.marketing()
   </div>
 </body>
 
