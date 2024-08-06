@@ -1,9 +1,8 @@
 # FrameRate
-public/images/logo.png
 Remember FrameRate? It's BACK and better than ever!
 
 <p align="center">
-  <img src="./src/main/resources/static/images/logo.png" width="300px" alt="FrameRate logo" />
+  <img src="./src/main/resources/public/images/logo.png" width="300px" alt="FrameRate logo" />
 </p>
 
 This web application is all about creating and sharing anonymous movie reviews
