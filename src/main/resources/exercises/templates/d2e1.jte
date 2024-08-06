@@ -1,6 +1,3 @@
-@import java.util.List
-@param List<String> shopping
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,14 +8,11 @@
 </head>
 
 <body>
-  <h1>Shopping list</h1>
-
-  <ul>
-    <!-- TODO: loop through `shopping` and render each item inside a <li> element -->
-    @for(var item : shopping)
-      <li>${item}</li>
-    @endfor
-  </ul>
+  <h1>Welcome to day 2!</h1>
+  <div>
+    <!-- TODO: Call the template marketing.jte here -->
+    @template.partial.marketing()
+  </div>
 </body>
 
 </html>
