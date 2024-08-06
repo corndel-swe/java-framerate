@@ -23,7 +23,10 @@ public class D1E2 {
         ctx -> {
           var message = "Hello from d1e2!";
 
-          // TODO Write prompt and remove answer
+          // TODO: Render 'd1e2.jte' and pass the msg
+          // TODO: Open d1e2.jte and follow the instructions
+
+          // TODO remove answer
           ctx.render("d1e2.jte", Collections.singletonMap("message", message));
         });
   }

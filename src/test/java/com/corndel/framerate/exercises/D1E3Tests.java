@@ -14,7 +14,7 @@ public class D1E3Tests {
   Javalin app = new D1E3().app;
 
   @Test
-  public void GET_index_to_hello_world() {
+  public void GET_includes_shopping_list() {
     JavalinTest.test(
         app,
         (server, client) -> {

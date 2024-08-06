@@ -11,6 +11,7 @@ public class D1E1 {
         Javalin.create(
             config -> {
               // TODO: Configure the app to serve static files from 'resources/exercises/public'
+
               // TODO REMOVE THIS
               config.staticFiles.add("/exercises/public", Location.CLASSPATH);
             });

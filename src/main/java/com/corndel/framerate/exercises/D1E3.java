@@ -17,6 +17,8 @@ public class D1E3 {
             config -> {
               var codeResolver = new ResourceCodeResolver("exercises/templates");
               var templateEngine = TemplateEngine.create(codeResolver, ContentType.Html);
+
+              // TODO: Configure the app to use EJS as the view engine
               config.fileRenderer(new JavalinJte(templateEngine));
             });
 
@@ -31,6 +33,9 @@ public class D1E3 {
                   "Lifesize cutout of Christian Bale as Batman",
                   "Milk",
                   "Bread");
+          // TODO: Render 'd1e3.jte', passing the value of `shopping`
+
+          // TODO: Open d1e3.ejs and follow the instructions
 
           // TODO Write prompt and remove answer
           ctx.render("d1e3.jte", Collections.singletonMap("shopping", shopping));

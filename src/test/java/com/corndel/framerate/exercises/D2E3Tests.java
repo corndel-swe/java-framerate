@@ -13,7 +13,7 @@ public class D2E3Tests {
   Javalin app = new D2E3().app;
 
   @Test
-  public void GET_index_to_hello_world() {
+  public void GET_includes_form() {
     JavalinTest.test(
         app,
         (server, client) -> {
@@ -31,7 +31,7 @@ public class D2E3Tests {
   }
 
   @Test
-  public void etc() {
+  public void POST_reads_form_content() {
     JavalinTest.test(
         app,
         (server, client) -> {

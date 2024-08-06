@@ -12,7 +12,7 @@ public class D2E1Tests {
   Javalin app = new D2E1().app;
 
   @Test
-  public void GET_index_to_hello_world() {
+  public void GET_includes_partial() {
     JavalinTest.test(
         app,
         (server, client) -> {

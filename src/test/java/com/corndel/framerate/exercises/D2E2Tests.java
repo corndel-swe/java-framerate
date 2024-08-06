@@ -12,7 +12,7 @@ public class D2E2Tests {
   Javalin app = new D2E2().app;
 
   @Test
-  public void GET_index_to_hello_world() {
+  public void GET_includes_image() {
     JavalinTest.test(
         app,
         (server, client) -> {
@@ -31,7 +31,7 @@ public class D2E2Tests {
   }
 
   @Test
-  public void etc() {
+  public void GET_includes_alt_text() {
     JavalinTest.test(
         app,
         (server, client) -> {

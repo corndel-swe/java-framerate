@@ -11,7 +11,7 @@ public class D1E1Tests {
   Javalin app = new D1E1().app;
 
   @Test
-  public void GET_index_to_hello_world() {
+  public void GET_success_image() {
     JavalinTest.test(
         app,
         (server, client) -> {
