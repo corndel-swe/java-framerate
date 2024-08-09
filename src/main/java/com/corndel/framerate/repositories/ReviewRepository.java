@@ -23,10 +23,3 @@ public class ReviewRepository {
     }
   }
 }
-  /*
-    static async findReviews(id) {
-      const query = 'select * from reviews where movieId = ?'
-      const results = await db.raw(query, [id])
-      return results
-    }
-  */
