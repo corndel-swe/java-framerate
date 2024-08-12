@@ -32,7 +32,7 @@ public class D1E3 {
                   "Bread");
           // TODO: Render 'd1e3.jte', passing the value of `shopping`
 
-          // TODO: Open d1e3.ejs and follow the instructions
+          // TODO: Open d1e3.jte and follow the instructions
         });
   }
 }
