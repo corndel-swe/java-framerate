@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 
 public class D2E1Tests {
 
-  Javalin app = new D2E1().app;
+  Javalin app = D2E1.createApp();
 
   @Test
   public void GET_includes_partial() {
@@ -23,8 +23,7 @@ public class D2E1Tests {
           var document = Jsoup.parse(body);
           var marketingText = document.select("marquee").first().text();
 
-          var expectedMarketingText =
-              "We have been trying to contact you about your car insurance!";
+          var expectedMarketingText = "We have been trying to contact you about your car insurance!";
           assertThat(marketingText).isEqualTo(expectedMarketingText);
         });
   }

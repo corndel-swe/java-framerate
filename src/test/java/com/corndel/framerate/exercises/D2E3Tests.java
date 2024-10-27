@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 
 public class D2E3Tests {
 
-  Javalin app = new D2E3().app;
+  Javalin app = D2E3.createApp();
 
   @Test
   public void GET_includes_form() {
@@ -35,16 +35,15 @@ public class D2E3Tests {
     JavalinTest.test(
         app,
         (server, client) -> {
-          var res =
-              client.request(
-                  "/submit",
-                  requestBuilder -> {
-                    requestBuilder.post(
-                        new FormBody.Builder()
-                            .add("name", "John Doe")
-                            .add("email", "john@example.com")
-                            .build());
-                  });
+          var res = client.request(
+              "/submit",
+              requestBuilder -> {
+                requestBuilder.post(
+                    new FormBody.Builder()
+                        .add("name", "John Doe")
+                        .add("email", "john@example.com")
+                        .build());
+              });
           assertThat(res.code()).isEqualTo(200);
 
           var body = res.body().string();

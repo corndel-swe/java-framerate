@@ -1,40 +1,37 @@
 package com.corndel.framerate.exercises;
 
-import gg.jte.ContentType;
-import gg.jte.TemplateEngine;
-import gg.jte.resolve.ResourceCodeResolver;
 import io.javalin.Javalin;
 import io.javalin.http.staticfiles.Location;
-import io.javalin.rendering.template.JavalinJte;
+import io.javalin.rendering.template.JavalinThymeleaf;
 
 public class D2E3 {
-  public Javalin app;
-
-  public D2E3() {
-    app =
-        Javalin.create(
-            config -> {
-              var codeResolver = new ResourceCodeResolver("exercises/templates");
-              var templateEngine = TemplateEngine.create(codeResolver, ContentType.Html);
-              config.staticFiles.add("/exercises/public", Location.CLASSPATH);
-              config.fileRenderer(new JavalinJte(templateEngine));
-            });
+  public static Javalin createApp() {
+    var app = Javalin.create(
+        config -> {
+          config.staticFiles.add("/exercises/public", Location.CLASSPATH);
+          config.fileRenderer(new JavalinThymeleaf());
+        });
 
     app.get(
         "/d2e3",
         ctx -> {
-          ctx.render("d2e3.jte");
+          ctx.render("d2e3.html");
         });
 
     app.post(
         "/submit",
         ctx -> {
-          // TODO: get the `name` and `email` from the form so that the below response works
+          // TODO: Open d2e3.html and follow the instructions
+
+          // TODO: get the `name` and `email` from the form so that the below response
+          // works
 
           var name = "";
           var email = "";
 
           ctx.result("Received: " + name + ", " + email);
         });
+
+    return app;
   }
 }

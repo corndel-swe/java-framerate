@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 
 public class D2E2Tests {
 
-  Javalin app = new D2E2().app;
+  Javalin app = D2E2.createApp();
 
   @Test
   public void GET_includes_image() {

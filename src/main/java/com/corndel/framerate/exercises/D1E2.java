@@ -1,29 +1,25 @@
 package com.corndel.framerate.exercises;
 
-import gg.jte.ContentType;
-import gg.jte.TemplateEngine;
-import gg.jte.resolve.ResourceCodeResolver;
 import io.javalin.Javalin;
-import io.javalin.rendering.template.JavalinJte;
+import io.javalin.rendering.template.JavalinThymeleaf;
 
 public class D1E2 {
-  public Javalin app;
 
-  public D1E2() {
-    app =
-        Javalin.create(
-            config -> {
-              var codeResolver = new ResourceCodeResolver("exercises/templates");
-              var templateEngine = TemplateEngine.create(codeResolver, ContentType.Html);
-              config.fileRenderer(new JavalinJte(templateEngine));
-            });
+  public static Javalin createApp() {
+    var app = Javalin.create(
+        config -> {
+          config.fileRenderer(new JavalinThymeleaf());
+        });
+
     app.get(
         "/d1e2",
         ctx -> {
           var message = "Hello from d1e2!";
 
-          // TODO: Render 'd1e2.jte' and pass the msg
-          // TODO: Open d1e2.jte and follow the instructions
+          // TODO: Render 'Open resources/templates/d1e2.html' and pass the message
+          // TODO: d1e2.html and follow the instructions
         });
+
+    return app;
   }
 }

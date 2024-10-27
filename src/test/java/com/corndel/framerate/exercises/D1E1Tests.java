@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 public class D1E1Tests {
 
-  Javalin app = new D1E1().app;
+  Javalin app = D1E1.createApp();
 
   @Test
   public void GET_success_image() {

@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 
 public class D1E2Tests {
 
-  Javalin app = new D1E2().app;
+  Javalin app = D1E2.createApp();
 
   @Test
   public void GET_includes_message() {
