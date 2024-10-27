@@ -6,7 +6,7 @@ import io.javalin.http.staticfiles.Location;
 public class App {
   public static void main(String[] args) {
     var javalin = createApp();
-    javalin.start(8080);
+    javalin.start(8081);
   }
 
   public static Javalin createApp() {
