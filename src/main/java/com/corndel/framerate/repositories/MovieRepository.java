@@ -12,7 +12,7 @@ public class MovieRepository {
 
     try (var con = DB.getConnection();
         var stmt = con.createStatement();
-        var rs = stmt.executeQuery(query); ) {
+        var rs = stmt.executeQuery(query);) {
 
       var users = new ArrayList<Movie>();
       while (rs.next()) {
