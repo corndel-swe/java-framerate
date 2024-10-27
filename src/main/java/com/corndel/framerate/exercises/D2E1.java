@@ -25,7 +25,7 @@ public class D2E1 {
     app.get(
         "/d2e1",
         ctx -> {
-          ctx.render("/exercises/templates/d2e1.html");
+          ctx.render("d2e1.html");
         });
 
     return app;
