@@ -70,7 +70,7 @@
         <artifactId>flyway-maven-plugin</artifactId>
         <version>10.15.2</version>
         <configuration>
-          <url>jdbc:sqlite:nozama.db</url>
+          <url>jdbc:sqlite:framerate.db</url>
         </configuration>
         <dependencies>
           <dependency>
