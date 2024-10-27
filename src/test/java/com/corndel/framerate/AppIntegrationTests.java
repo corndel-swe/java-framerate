@@ -8,7 +8,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class AppIntegrationTests {
 
-  Javalin app = new App().javalinApp(); // inject any dependencies you might have
+  Javalin app = App.createApp(); // inject any dependencies you might have
 
   @Test
   public void GET_index_to_hello_world() {

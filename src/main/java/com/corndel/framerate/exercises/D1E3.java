@@ -4,6 +4,7 @@ import io.javalin.Javalin;
 import io.javalin.rendering.template.JavalinThymeleaf;
 
 import java.util.List;
+import java.util.Map;
 
 public class D1E3 {
   public static Javalin createApp() {
@@ -22,9 +23,8 @@ public class D1E3 {
               "Lifesize cutout of Christian Bale as Batman",
               "Milk",
               "Bread");
-          // TODO: Render 'd1e3.html', passing the value of `shopping`
 
-          // TODO: Open d1e3.html and follow the instructions
+          ctx.render("exercises/templates/d1e3.html", Map.of("shopping", shopping));
         });
 
     return app;
