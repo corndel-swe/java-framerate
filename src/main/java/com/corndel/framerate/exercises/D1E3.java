@@ -24,7 +24,7 @@ public class D1E3 {
               "Milk",
               "Bread");
 
-          ctx.render("exercises/templates/d1e3.html", Map.of("shopping", shopping));
+          ctx.render("/exercises/templates/d1e3.html", Map.of("shopping", shopping));
         });
 
     return app;
