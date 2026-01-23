@@ -29,4 +29,8 @@ public class D1E3 {
 
     return app;
   }
+
+  public static void main(String[] args) {
+    createApp().start(8003);
+  }
 }

@@ -1,6 +1,10 @@
 package com.corndel.framerate.models;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Movie {
   public enum Genre {
@@ -19,7 +23,14 @@ public class Movie {
     Romance,
     SciFi,
     Thriller,
-    War
+    War;
+
+    public static List<Genre> valueOf(String string, String delimiter) {
+      return Arrays.stream(string.split(delimiter))
+          .map(String::trim)
+          .map(Genre::valueOf)
+          .collect(Collectors.toList());
+    }
   }
 
   public Movie() {
@@ -43,10 +54,78 @@ public class Movie {
   }
 
   private int id;
-  public String title;
-  public String releaseDate;
-  public String ageRating;
-  public List<Genre> genres;
-  public int runtime;
-  public String imageURL;
+  private String title;
+  private String releaseDate;
+  private String ageRating;
+  private List<Genre> genres;
+  private int runtime;
+  private String imageURL;
+
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
+  }
+
+  public String getTitle() {
+    return title;
+  }
+
+  public void setTitle(String title) {
+    this.title = title;
+  }
+
+  public String getReleaseDate() {
+    return releaseDate;
+  }
+
+  public void setReleaseDate(String releaseDate) {
+    this.releaseDate = releaseDate;
+  }
+
+  public String getAgeRating() {
+    return ageRating;
+  }
+
+  public void setAgeRating(String ageRating) {
+    this.ageRating = ageRating;
+  }
+
+  public List<Genre> getGenres() {
+    return genres;
+  }
+
+  public void setGenres(List<Genre> genres) {
+    this.genres = genres;
+  }
+
+  public int getRuntime() {
+    return runtime;
+  }
+
+  public void setRuntime(int runtime) {
+    this.runtime = runtime;
+  }
+
+  public String getImageURL() {
+    return imageURL;
+  }
+
+  public void setImageURL(String imageURL) {
+    this.imageURL = imageURL;
+  }
+
+  public static Movie of(ResultSet rs) throws SQLException {
+    var id = rs.getInt("id");
+    var title = rs.getString("title");
+    var releaseDate = rs.getString("releaseDate");
+    var ageRating = rs.getString("ageRating");
+    var runtime = rs.getInt("runtime");
+    var imageURL = rs.getString("imageURL");
+    var genres = Genre.valueOf(rs.getString("genre"), ",");
+
+    return new Movie(id, title, releaseDate, ageRating, genres, runtime, imageURL);
+  }
 }

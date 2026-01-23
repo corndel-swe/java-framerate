@@ -13,4 +13,8 @@ public class D1E1 {
 
     return app;
   }
+
+  public static void main(String[] args) {
+    createApp().start(8001);
+  }
 }

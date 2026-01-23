@@ -31,4 +31,8 @@ public class D2E1 {
 
     return app;
   }
+
+  public static void main(String[] args) {
+    createApp().start(8004);
+  }
 }
