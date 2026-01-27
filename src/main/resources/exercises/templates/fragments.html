@@ -1,3 +1,75 @@
+<!--
+  ==========================================
+  THYMELEAF QUICK REFERENCE
+  ==========================================
+
+  CONDITIONALS - th:if / th:unless
+  ================================
+  <div th:if="${user != null}">Welcome!</div>
+  <div th:unless="${user != null}">Please log in</div>
+
+  <span th:if="${movie.rating > 8}">Highly Rated!</span>
+
+
+  LINKS AND URLS - th:href="@{...}"
+  =================================
+  Static link:
+  <a th:href="@{/movies}">All Movies</a>
+
+  With path variable:
+  <a th:href="@{/movies/{id}(id=${movie.id})}">View Movie</a>
+
+  With query parameter:
+  <a th:href="@{/search(query=${term})}">Search</a>
+
+  Combined:
+  <a th:href="@{/movies/{id}/reviews(id=${movie.id}, page=${page})}">Reviews</a>
+
+
+  FRAGMENTS - th:fragment / th:replace / th:insert
+  =================================================
+  Define a fragment (in fragments.html):
+  <nav th:fragment="navbar">...</nav>
+
+  Use a fragment:
+  <div th:replace="~{fragments :: navbar}"></div>
+
+  With parameters:
+  <div th:fragment="card(title, content)">
+    <h2 th:text="${title}">Title</h2>
+    <p th:text="${content}">Content</p>
+  </div>
+
+  <div th:replace="~{fragments :: card('Hello', 'World')}"></div>
+
+
+  ITERATION - th:each
+  ===================
+  <ul>
+    <li th:each="movie : ${movies}" th:text="${movie.title}">Movie Title</li>
+  </ul>
+
+  With status variable:
+  <tr th:each="movie, status : ${movies}">
+    <td th:text="${status.index}">0</td>
+    <td th:text="${movie.title}">Title</td>
+  </tr>
+
+
+  TEXT AND HTML
+  =============
+  <span th:text="${movie.title}">Default Title</span>
+  <div th:utext="${movie.description}">Unescaped HTML</div>
+
+
+  ATTRIBUTES
+  ==========
+  <input th:value="${user.name}" />
+  <img th:src="@{${movie.imageURL}}" th:alt="${movie.title}" />
+  <div th:class="${movie.featured} ? 'featured' : 'normal'">...</div>
+
+-->
+
 <marquee th:fragment="marketing">
   We have been trying to contact you about your car insurance!
 </marquee>
